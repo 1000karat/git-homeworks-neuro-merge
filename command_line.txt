@@ -1,0 +1,24 @@
+>Клонируйте Git-репозиторий по ссылке;
+git init
+git clone https://github.com/netology-code/git-homeworks-neuro-merge.git
+git branch -a
+
+>Слейте ветку origin/feature/earlyorder с веткой main
+git log --graph --oneline --all
+git merge --no-ff origin/feature/earlyorder -m "Early order merging"
+
+>Разрешите появившийся при слиянии конфликт;
+Удалён:
+<b class="promo-title">Искусственный интеллект решающий<br>ваши бизнес-задачи</b>
+<p class="promo-description mt-5">Воспользуйтесь современными возможностями искусственного интеллекта, оставив конкурентов позади!</p>
+
+git commit -a -m "Early order merging"
+
+>Создайте отдельный репозиторий на GitHub'е;
+https://github.com/1000karat/git-homeworks-neuro-merge.git
+
+>Свяжите ваш локальный репозиторий с только что созданным удалённым репозиторием. При связывании используйте кодовое имя target.
+git remote add target https://github.com/1000karat/git-homeworks-neuro-merge.git
+
+>Отправьте локальные изменения ветки main в удалённый новый репозиторий target.
+git push -u target main
